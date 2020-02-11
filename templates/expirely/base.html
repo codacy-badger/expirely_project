@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load expirely_template_tags %}
+
+<html>
+    <head lang="en">
+        <title>
+            Expirely -
+            {% block title_block %}
+                <!-- Default text inside this -->
+                Expirely
+            {% endblock %}
+        </title>
+    </head>
+
+    <body>
+        <div>
+            {% block body_block %}
+            {% endblock %}
+        </div>
+
+        <div>
+
+            {% if user.is_authenticated %}
+                <!-- Show when the user is logged in -->
+
+            {% else %}
+                <!-- Show  when the user is NOT logged in -->
+
+            {% endif %}
+            <!-- Outside the conditional statements, ALWAYS show -->
+
+        </div>
+    </body>
+</html>

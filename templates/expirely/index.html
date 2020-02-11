@@ -1,0 +1,18 @@
+{% extends 'expirely/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Expirely!
+{% endblock %}
+
+{% block body_block %}
+    <h1>Expirely...</h1>
+        <div>
+            Expirely! <br />
+            <strong>{{ boldmessage }}</strong><br />
+        </div>
+        <div>
+            <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
+            <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" />
+        </div>
+{% endblock %}
